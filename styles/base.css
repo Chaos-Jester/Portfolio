@@ -75,6 +75,9 @@
 }
 
 #bio {
+    font-family: "Modern Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
     position: relative;
     opacity: 0;
     /* Initially hidden */
@@ -111,6 +114,34 @@
     font-size: 2rem;
     color: white;
     animation: fall 4s linear infinite;
+}
+
+.projects-container {
+    width: 100%;
+    height: 80%;
+    margin: 10px auto;
+    background-color: fuchsia;
+    gap: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projects-card,
+.card-title {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.projects-card,
+.card-description {
+    font-family: "Charmonman", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .socials-footer {
