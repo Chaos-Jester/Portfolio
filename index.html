@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/base.css" rel="stylesheet" />
+    <title>Connor's Portfolio</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <ul class="nav-items">
+                <li class="nav" onclick="myNav('index.html')">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav" onclick="myNav('contact.html')">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="nav" onclick="myNav('about.html')">
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <div class="about-me">
+            <h1>Hi I'm Connor!</h1>
+            <button onclick="slideIn()">About Me</button>
+        </div>
+
+        <div id="bio">
+            <h1>About Me</h1>
+            <p>Currently learning Front-End development using HTML, CSS and Javascript (react).</p>
+            <p>I have experience in the cyber-security field, mostly penetration testing and bug hunting, I have also
+                competed in ethical hack events.</p>
+        </div>
+
+        <div class="icon-fall"></div>
+
+        <div class="projects">
+            <div class="projects-container">
+                <div class="projects-card">
+                    <h4 class="card-title">To-Do App</h4>
+                    <img src="" alt="">
+                    <p class="card-description">A simple to-do app using html, css and javascript</p>
+                </div>
+                <div class="projects-card">
+                    <h4 class="card-title">Blog-App</h4>
+                    <img src="" alt="">
+                    <p class="card-description">A simple blog app using html, css and javascript</p>
+                </div>
+                <div class="projects-card">
+                    <h4 class="card-title">Space Invaders Clone</h4>
+                    <img src="" alt="">
+                    <p class="card-description">Space Invaders clone project for Tekheart learning using HTML, CSS, and
+                        Phaser.JS</p>
+                </div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skills-card">
+                <h3 class="skill-title">HTML</h3>
+                <img class="skill-logo" src="" alt="Skill Logo HTML">
+            </div>
+            <div class="skills-card">
+                <h3 class="skill-title">CSS</h3>
+                <img class="skill-logo" src="" alt="Skill Logo CSS">
+            </div>
+            <div class="skills-card">
+                <h3 class="skill-title">Javascript</h3>
+                <img class="skill-logo" src="" alt="Skill Logo Javascript">
+            </div>
+            <div class="skills-card">
+                <h3 class="skill-title">Python</h3>
+                <img class="skill-logo" src="" alt="Skill Logo Python">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials-footer">
+            <div class="social-icons">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/connor-simpson-aaaaa421b/">
+                            <img class="logo" src="Assets/linkedin-logo.png" alt="linkedin-logo" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function myNav(page) {
+            window.location.href = page;
+        }
+
+        function slideIn() {
+            const bio_div = document.getElementById('bio');
+            bio.classList.add('slide-in');
+            const aboutMe = document.getElementsByClassName('about-me');
+            aboutMe[0].style.display = 'none';
+        }
+
+        const icons = [
+            '😊',
+            '😂',
+            '😍',
+            ''
+        ]
+
+        const iconFall = document.querySelector('.icon-fall')
+        setInterval(() => {
+            iconFall.innerHTML = ''
+            for (let i = 0; i < 100; i++) {
+                const icon = document.createElement('div')
+                icon.classList.add('icon')
+                icon.innerText = icons[Math.floor(Math.random() * icons.length)]
+                icon.style.left = `${Math.random() * 100}vw`
+                icon.style.animationDuration = `${Math.random() * 1 + 2}s`
+                iconFall.appendChild(icon)
+            }
+        }, 3000)
+    </script>
+</body>
+
+
+</html>

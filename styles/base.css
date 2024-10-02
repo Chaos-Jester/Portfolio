@@ -1,0 +1,172 @@
+* {
+    color: #fff;
+    background-color: #190940;
+}
+
+.nav-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    z-index: 10;
+    border-bottom: 1 solid #0000ff;
+    background-color: #a105df;
+    margin-bottom: 20%;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav {
+    width: 120px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav a {
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav:hover {
+    border: 1px solid blue;
+}
+
+.main-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 5% auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.about-me {
+    height: 100vh;
+    min-height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: transparent;
+}
+
+.about-me button {
+    width: 10%;
+    height: 5%;
+    border-radius: 13%;
+}
+
+#bio {
+    position: relative;
+    opacity: 0;
+    /* Initially hidden */
+    height: 100vh;
+    min-height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    background-color: transparent;
+    overflow-y: hidden;
+}
+
+.slide-in {
+    animation: slide 1s ease-out forwards;
+}
+
+.icon-fall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.icon {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    animation: fall 4s linear infinite;
+}
+
+.socials-footer {
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100vw;
+    background-color: transparent;
+}
+
+.socials-icons {
+    position: relative;
+    max-height: 80%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+
+.social-icons ul {
+    list-style: none;
+}
+
+.socials-icons li {
+    position: relative;
+    border-radius: 50%;
+    height: 85%;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+        /* Start off-screen (to the right) */
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        /* End at the original position */
+        opacity: 1;
+    }
+}

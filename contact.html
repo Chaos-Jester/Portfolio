@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/base.css" rel="stylesheet" />
+    <link href="styles/contact.css" rel="stylesheet" />
+    <title>Connor's Portfolio</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <ul class="nav-items">
+                <li class="nav" onclick="myNav('index.html')">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav" onclick="myNav('contact.html')">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="nav" onclick="myNav('about.html')">
+                    <a href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+        <div class="contact-form">
+            <h1 class="form-title">Contact Me</h1>
+            <form onsubmit="(e) => submitform(e)">
+                <div class="contact-email">
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" autocomplete="email"
+                        placeholder="Johndoe123@email.com" />
+                </div>
+                <div class="contact-name">
+                    <label for="contact-name">Name</label>
+                    <input type="text" name="contact-name" id="contact-name" placeholder="John Doe" />
+                </div>
+                <div class="contact-query">
+                    <label for="query"></label>
+                    <textarea type="text" name="query" id="query" placeholder="Your Question Here..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="socials-footer">
+
+        </div>
+    </footer>
+    <script>
+        function submitform(e) {
+            // e.preventDefault()
+            console.log(e)
+        }
+    </script>
+</body>
+
+
+</html>
