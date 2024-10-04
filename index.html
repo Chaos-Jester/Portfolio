@@ -65,22 +65,24 @@
                 </div>
             </div>
         </div>
-        <div class="skills">
-            <div class="skills-card">
-                <h3 class="skill-title">HTML</h3>
-                <img class="skill-logo" src="" alt="Skill Logo HTML">
-            </div>
-            <div class="skills-card">
-                <h3 class="skill-title">CSS</h3>
-                <img class="skill-logo" src="" alt="Skill Logo CSS">
-            </div>
-            <div class="skills-card">
-                <h3 class="skill-title">Javascript</h3>
-                <img class="skill-logo" src="" alt="Skill Logo Javascript">
-            </div>
-            <div class="skills-card">
-                <h3 class="skill-title">Python</h3>
-                <img class="skill-logo" src="" alt="Skill Logo Python">
+        <div class="skills-container">
+            <div class="skills">
+                <div class="skills-card">
+                    <h3 class="skill-title">HTML</h3>
+                    <img class="skill-logo" src="" alt="Skill Logo HTML">
+                </div>
+                <div class="skills-card">
+                    <h3 class="skill-title">CSS</h3>
+                    <img class="skill-logo" src="" alt="Skill Logo CSS">
+                </div>
+                <div class="skills-card">
+                    <h3 class="skill-title">Javascript</h3>
+                    <img class="skill-logo" src="" alt="Skill Logo Javascript">
+                </div>
+                <div class="skills-card">
+                    <h3 class="skill-title">Python</h3>
+                    <img class="skill-logo" src="" alt="Skill Logo Python">
+                </div>
             </div>
         </div>
     </main>
@@ -105,6 +107,7 @@
 
         function slideIn() {
             const bio_div = document.getElementById('bio');
+            bio_div.style.display = "flex";
             bio.classList.add('slide-in');
             const aboutMe = document.getElementsByClassName('about-me');
             aboutMe[0].style.display = 'none';
@@ -114,7 +117,8 @@
             '😊',
             '😂',
             '😍',
-            ''
+            '☣',
+            '☢'
         ]
 
         const iconFall = document.querySelector('.icon-fall')
